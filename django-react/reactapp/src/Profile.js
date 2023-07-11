@@ -31,8 +31,8 @@ const Profile = () => {
 
             const formData = new FormData();
             formData.append('profile_image', file);
-            axios.post('http://127.0.0.1:8000/api/update-profile-image/', formData).
-              then(res => {
+            axios.post('http://127.0.0.1:8000/api/update-profile-image/', formData)
+              .then(res => {
                 setstoreImage([{ imgCrop }]);
                 setdialogs(false);
               })
